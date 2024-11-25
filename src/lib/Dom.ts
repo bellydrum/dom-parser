@@ -91,7 +91,7 @@ function* domGenerator(html: string) {
 }
 
 function isElementComposed(element: Node | null, tag: string) {
-  if (!tag) {
+  if (!element || !tag) {
     return false;
   }
   const isCloseTag = closeTagExp.test(tag);
